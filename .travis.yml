@@ -1,0 +1,14 @@
+notifications:
+  email: false
+
+language: python
+
+env:
+  - MODULES="Django==1.7"
+  - MODULES="Django==1.7.1"
+
+install:
+  - pip install $MODULES --use-mirrors
+
+script:
+  - python manage.py test
